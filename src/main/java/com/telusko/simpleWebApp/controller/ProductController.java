@@ -39,7 +39,7 @@ public class ProductController {
     @PutMapping("/product/{prodId}")
     public void updateProduct(@RequestBody Product prod) {
         System.out.println(">>> updated successfully >>> " + prod);
-        service.putProduct(prod);
+        service.updateProduct(prod);
     }
 
     @DeleteMapping("/product/{prodId}")
@@ -48,3 +48,5 @@ public class ProductController {
         service.deleteProduct(prodId);
     }
 }
+// access DB
+//http://localhost:8080/h2-console
